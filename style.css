@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e7e6;
+}
+
+nav {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.nav-logo img {
+    width: 100px;
+    margin-top: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.nav-logo:hover,
+.nav-item:hover {
+    outline: 1px solid white;
+    border-radius: 2px;
+}
+
+.nav-search {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 20px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.nav-search input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.nav-search button {
+    width: 45px;
+    background-color: #febd68;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.nav-search button:hover {
+    background-color: #f3a847;
+}
+
+.nav-search:focus-within {
+    outline: 3px solid #f3a847;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 5px;
+}
+
+.nav-line-1 {
+    font-size: 12px;
+}
+
+.nav-line-2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hero-section {
+    background-image: url('https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/GWBlackups_BTS_cs_3000x1200_1X._CB404044887_.jpg');
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-msg {
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 95%;
+    margin-bottom: 25px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.hero-msg a {
+    color: #007185;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+    margin-top: -300px;
+    z-index: 10;
+    position: relative;
+    padding: 20px;
+}
+
+.box {
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px 0px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.box h3 {
+    width: 85%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box-img {
+    height: 300px;
+    width: 85%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.box a {
+    width: 85%;
+    font-size: 13px;
+    color: #007185;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 15px;
+}
+
+.footer-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.footer-panel1:hover {
+    background-color: #485769;
+}
+
+.footer-panel2 {
+    background-color: #232f3e;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+.footer-panel2 ul {
+    margin-top: 20px;
+}
+
+.footer-panel2 ul li {
+    list-style: none;
+    margin-bottom: 7px;
+}
+
+.footer-panel2 ul li a {
+    display: block;
+    font-size: 14px;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.footer-panel2 ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-panel3 {
+    background-color: #232f3e;
+    color: white;
+    border-top: 1px solid #3a4553;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+    .box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .box {
+        width: 100%;
+    }
+
+    .nav-search {
+        display: none;
+    }
+
+    .footer-panel2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}

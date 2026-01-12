@@ -281,12 +281,32 @@ class Square extends Rectangle {
 	
 }
 const square = new Square(7);
-console.log(square.width); // Output: 7
-console.log(square.height); // Output: 7
-console.log(square.getArea()); // Output: 49
-console.log(square.getPerimeter()); // Output: 28
-console.log("-----");
-const rectangle = new Rectangle(5, 10);
-console.log(rectangle.width); // Output: 5
-console.log(rectangle.height); // Output: 10
-console.log(rectangle.getArea()); // Output: 50
+// console.log(square.width); // Output: 7
+// console.log(square.height); // Output: 7
+// console.log(square.getArea()); // Output: 49
+// console.log(square.getPerimeter()); // Output: 28
+// console.log("-----");
+// const rectangle = new Rectangle(5, 10);
+// console.log(rectangle.width); // Output: 5
+// console.log(rectangle.height); // Output: 10
+// console.log(rectangle.getArea()); // Output: 50
+
+//calculator
+
+function Calculator(){
+    this.read=function(){
+        this.num1 = parseInt(prompt("Enter first number: "));
+        this.num2 = parseInt(prompt("Enter second number: "));
+    }
+    this.sum = function(){
+        return this.num1 + this.num2;
+    }
+    this.mul = function(){
+        return this.num1 * this.num2;
+    }
+}
+
+const result1 = new Calculator();
+result1.read();
+console.log(result1.sum());
+console.log(result1.mul());

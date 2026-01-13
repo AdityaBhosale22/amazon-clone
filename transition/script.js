@@ -310,3 +310,13 @@ const result1 = new Calculator();
 result1.read();
 console.log(result1.sum());
 console.log(result1.mul());
+
+class BankAccount {
+    constructor(){
+        this.balance = 0;
+    }
+    deposit(amount){
+        this.balance += amount;
+        console.log(`Deposited amount: ${amount}, Balance: ${this.balance}`);
+    }
+}

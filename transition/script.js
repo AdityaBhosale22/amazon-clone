@@ -293,23 +293,23 @@ const square = new Square(7);
 
 //calculator
 
-function Calculator(){
-    this.read=function(){
-        this.num1 = parseInt(prompt("Enter first number: "));
-        this.num2 = parseInt(prompt("Enter second number: "));
-    }
-    this.sum = function(){
-        return this.num1 + this.num2;
-    }
-    this.mul = function(){
-        return this.num1 * this.num2;
-    }
-}
+// function Calculator(){
+//     this.read=function(){
+//         this.num1 = parseInt(prompt("Enter first number: "));
+//         this.num2 = parseInt(prompt("Enter second number: "));
+//     }
+//     this.sum = function(){
+//         return this.num1 + this.num2;
+//     }
+//     this.mul = function(){
+//         return this.num1 * this.num2;
+//     }
+// }
 
-const result1 = new Calculator();
-result1.read();
-console.log(result1.sum());
-console.log(result1.mul());
+// const result1 = new Calculator();
+// result1.read();
+// console.log(result1.sum());
+// console.log(result1.mul());
 
 class BankAccount {
     constructor(){
@@ -319,4 +319,20 @@ class BankAccount {
         this.balance += amount;
         console.log(`Deposited amount: ${amount}, Balance: ${this.balance}`);
     }
+    withdraw(amount){
+        if(amount > this.balance){
+            console.log("Insufficient balance");
+        }
+        else{
+            this.balance -= amount;
+            console.log(`Withdrew amount: ${amount}, Balance: ${this.balance}`);
+        }
+    }
 }
+
+console.log()
+const myAccount = new BankAccount();
+myAccount.deposit(500);
+myAccount.withdraw(200);
+myAccount.withdraw(400);
+myAccount.deposit(1000);

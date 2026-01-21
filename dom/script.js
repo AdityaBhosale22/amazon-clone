@@ -4,20 +4,13 @@ b.addEventListener("click", function() {
     document.body.style.backgroundColor = "lightblue";
 });
 
-let p = document.getElementById("hoverParagraph");
-p.addEventListener("mouseover", function() {
-    p.style.fontWeight = "bold";
-});
-p.addEventListener("mouseout", function() {
-    p.style.fontWeight = "normal";
-});
-
-let i = document.getElementById("textInput");
-i.addEventListener("input", function() {
-    document.getElementById("displayText").innerText = i.value;
-});
-
-let f = document.getElementById("backgroundChange");
-f.addEventListener("change", function() {
-    document.body.style.backgroundColor = f.value;
-});
+function sayhello() {
+    let count = 0;
+    count++;
+    console.log(count);
+    if (count == 2) {
+        document.getElementById("heading").innerText = "Magic Happened!";
+    } else {
+        document.getElementById("heading").innerText = "Click button for magic";
+    }
+}

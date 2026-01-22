@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+}
+.task{
+    background-color: #444;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: grab;
+}

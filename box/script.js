@@ -66,20 +66,69 @@
 // //     document.body.classList.toggle("dark-mode");
 // // })
 
-const themeBtn = document.getElementById("themeBtn");
+// const themeBtn = document.getElementById("themeBtn");
 
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-    document.body.classList.add(savedTheme);
-}
+// const savedTheme = localStorage.getItem("theme");
+// if (savedTheme) {
+//     document.body.classList.add(savedTheme);
+// }
 
-themeBtn.addEventListener("click", () => {
-    // This adds the class if it's missing, and removes it if it's there
-    document.body.classList.toggle("dark-mode");
-    // Save the current theme to localStorage
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark-mode");
-    } else {
-        localStorage.removeItem("theme");
+// themeBtn.addEventListener("click", () => {
+//     // This adds the class if it's missing, and removes it if it's there
+//     document.body.classList.toggle("dark-mode");
+//     // Save the current theme to localStorage
+//     if (document.body.classList.contains("dark-mode")) {
+//         localStorage.setItem("theme", "dark-mode");
+//     } else {
+//         localStorage.removeItem("theme");
+//     }
+// });
+
+// const clearBtn = document.getElementById("clear");
+// const textArea = document.getElementById("message");
+// const prevMsgbtn = document.getElementById("saveBtn");
+
+// prevMsgbtn.addEventListener("click",()=>{
+//     const savedMsg = localStorage.getItem("message");
+// if(savedMsg){
+//     textArea.value = savedMsg;
+// }
+// });
+
+// textArea.addEventListener("input",(e)=>{
+//     localStorage.setItem("message", e.target.value);
+// });
+
+
+
+// clearBtn.addEventListener("click",()=>{
+//     textArea.value = "";
+//     localStorage.removeItem("message");
+// })
+
+const submitBtn = document.getElementById("saveBtn");
+const fontSize = document.getElementById("fontsize");
+const fontColor = document.getElementById("fontcolor")
+
+submitBtn.addEventListener("click",()=>{
+    const fontsize = fontSize.value;
+    const fontcolor = fontColor.value;
+	document.cookie="fontsize=" + fontsize;
+	document.cookie="fontcolor=" + fontcolor;
+});
+
+window.addEventListener("load",()=>{
+    const cookies = document.cookie.split("; ");
+    const cookieObj = {};   
+    cookies.forEach(cookie => {
+        const [name, value] = cookie.split("=");
+        cookieObj[name] = value;
+    });
+
+    if(cookieObj.fontsize){
+        fontSize.value = cookieObj.fontsize;
+    }
+    if(cookieObj.fontcolor){
+        fontColor.value = cookieObj.fontcolor;
     }
 });
